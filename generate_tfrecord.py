@@ -25,6 +25,7 @@ Remember to git clone https://github.com/tensorflow/models.git
 Ref: https://github.com/abdelrahman-gaber/tf2-object-detection-api-tutorial
 """
 
+
 import os
 import glob
 import pandas as pd
@@ -34,7 +35,7 @@ import argparse
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
 import tensorflow.compat.v1 as tf
-from object_detection.utils import dataset_util, label_map_util
+from models.research.object_detection.utils import dataset_util, label_map_util
 from collections import namedtuple
 
 # Initiate argument parser
@@ -112,7 +113,7 @@ def main(_):
     images_path = args.images
     print("images path : ", images_path)
     print("csv path : ", csv_path)
-    print("path to output tfrecords : ", args.tfrecords)
+    print("path to output tfrecords : ", args.save_tfrecords)
     label_map_dict = label_map_util.get_label_map_dict(args.label_map)
     writer = tf.io.TFRecordWriter(args.tfrecords)
 
@@ -124,7 +125,7 @@ def main(_):
         writer.write(tf_example.SerializeToString())
 
     writer.close()
-    print('Successfully created the TFRecords: {}'.format(args.tfrecords))
+    print('Successfully created the TFRecords: {}'.format(args.save_tfrecords))
 
 
 if __name__ == '__main__':

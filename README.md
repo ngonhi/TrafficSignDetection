@@ -27,9 +27,7 @@ The following table sums up the results for our models:
 |EfficientDet D1 |13.2| 8.2|
 |Faster R-CNN Resnet50 |26.9 |14.5|
 
-## Demo Video
-https://youtu.be/E5a8aeRI5h4
-
+![demo](./demo.gif)
 
 ## Train and evaluation
 Please review our notebooks in `models` for detailed instructions on how to train and evaluate the models.

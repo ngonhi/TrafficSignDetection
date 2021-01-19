@@ -1,0 +1,28 @@
+item {
+    id: 1
+    name: 'cam_nguoc_chieu'
+}
+item {
+    id: 2
+    name: 'cam_dung_va_do'
+}
+item {
+    id: 3
+    name: 'cam_re'
+}
+item {
+    id: 4
+    name: 'gioi_han_toc_do'
+}
+item {
+    id: 5
+    name: 'cam_con_lai'
+}
+item {
+    id: 6
+    name: 'nguy_hiem'
+}
+item {
+    id: 7
+    name: 'hieu_lenh'
+}
